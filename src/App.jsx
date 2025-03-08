@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import "./App.css"; // Updated CSS for edge positioning
+import React, { useState } from "react";
+import "./App.css"; // Updated CSS for a colorful theme
 
 const App = () => {
   const [city, setCity] = useState("");
-  const [attractions, setAttractions] = useState([]);
+  const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Function to fetch attractions from Foursquare API
-  const fetchAttractions = async () => {
+  // Function to handle API call
+  const fetchData = async () => {
     if (!city) {
       setError("Please enter a city name.");
       return;
@@ -17,25 +17,19 @@ const App = () => {
     setLoading(true);
     setError("");
 
-    const apiKey = "fsq34UlC0S9hNJyll0ATALzaeperB6ZyzC2vB+cdT1edqQk="; // Replace with your Foursquare API key
-    const endpoint = `https://api.foursquare.com/v3/places/search?query=tourist+attraction&near=${city}&limit=5`;
-
     try {
-      const response = await fetch(endpoint, {
-        headers: {
-          Authorization: apiKey,
-        },
-      });
-
+      // Replace with your actual API endpoint
+      const response = await fetch(
+        `https://api.example.com/search?city=${city}`
+      );
       if (!response.ok) {
-        throw new Error("Failed to fetch data from Foursquare");
+        throw new Error("Failed to fetch data.");
       }
-
       const data = await response.json();
-      setAttractions(data.results);
-    } catch (error) {
-      setError("Something went wrong! Please try again.");
-      console.error("Error:", error);
+      setResults(data);
+    } catch (err) {
+      setError("An error occurred while fetching data.");
+      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -44,20 +38,7 @@ const App = () => {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchAttractions();
-  };
-
-  // Function to calculate bubble positions near the outer edge of the screen
-  const getBubblePosition = (index, total) => {
-    const angle = (index / total) * 2 * Math.PI; // Distribute bubbles evenly around the circle
-    const radius = Math.min(window.innerWidth, window.innerHeight) * 0.4; // Distance from center
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-
-    const x = centerX + radius * Math.cos(angle); // X position
-    const y = centerY + radius * Math.sin(angle); // Y position
-
-    return { x, y };
+    fetchData();
   };
 
   return (
@@ -79,36 +60,38 @@ const App = () => {
 
       {error && <p className="error">{error}</p>}
 
-      {/* Attraction bubbles */}
-      <div className="bubbles-container">
-        {attractions.map((attraction, index) => {
-          const { x, y } = getBubblePosition(index, attractions.length);
-          return (
-            <div
-              key={index}
-              className="bubble"
-              style={{
-                top: `${y}px`,
-                left: `${x}px`,
-                animationDelay: `${index * 0.5}s`, // Staggered animation
-              }}
-            >
-              <h4>{attraction.name}</h4>
-              <p>{attraction.location.address || "No address available"}</p>
-              <a
-                href={`https://foursquare.com/v/${attraction.fsq_id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on Foursquare
-              </a>
-            </div>
-          );
-        })}
-      </div>
+      {results && (
+        <div className="results">
+          <h2>Results for {city}</h2>
+          <div className="hotels">
+            <h3>🏨 Hotels</h3>
+            {results.hotels.length > 0 ? (
+              results.hotels.map((hotel, index) => (
+                <div key={index} className="hotel">
+                  <h4>{hotel.name}</h4>
+                  <p>{hotel.address}</p>
+                  <p>⭐ {hotel.rating}</p>
+                </div>
+              ))
+            ) : (
+              <p>No hotels found.</p>
+            )}
+          </div>
 
-      {attractions.length === 0 && !loading && (
-        <p className="no-results">No attractions found. Try another city.</p>
+          <div className="attractions">
+            <h3>🌆 Attractions</h3>
+            {results.attractions.length > 0 ? (
+              results.attractions.map((attraction, index) => (
+                <div key={index} className="attraction">
+                  <h4>{attraction.name}</h4>
+                  <p>{attraction.description}</p>
+                </div>
+              ))
+            ) : (
+              <p>No attractions found.</p>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );
