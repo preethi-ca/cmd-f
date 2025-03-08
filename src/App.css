@@ -11,6 +11,14 @@ body {
 }
 
 .app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
@@ -18,8 +26,7 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   width: 90%;
-  position: relative;
-  z-index: 1;
+  margin: 2rem auto;
 }
 
 h1 {
@@ -81,69 +88,49 @@ h1 {
   margin-top: 1rem;
 }
 
-.no-results {
-  color: #555;
-  margin-top: 1rem;
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Equally spaced grid */
+  gap: 1rem; /* Space between attractions */
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.bubbles-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Ensure clicks pass through to the form */
-}
-
-.bubble {
-  position: absolute;
+.attraction {
   background: rgba(255, 255, 255, 0.9);
   padding: 1rem;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: float 6s infinite ease-in-out;
   text-align: center;
-  width: 140px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Rounded, organic shape */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for shadow effect */
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Shadowed edges */
 }
 
-.bubble h4 {
-  margin: 0 0 0.5rem 0;
+.attraction h3 {
   color: #ff6f61;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.bubble p {
-  margin: 0.25rem 0;
+.attraction p {
   color: #555;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-.bubble a {
+.attraction a {
   color: #007bff;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-.bubble a:hover {
+.attraction a:hover {
   text-decoration: underline;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-10px) translateX(10px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
+.no-results {
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
 }

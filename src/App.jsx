@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./App.css"; // Updated CSS for edge positioning
+import React, { useState } from "react";
+import "./App.css"; // Updated CSS for the new layout
 
 const App = () => {
   const [city, setCity] = useState("");
   const [attractions, setAttractions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [searched, setSearched] = useState(false); // Track if "Explore" was clicked
 
   // Function to fetch attractions from Foursquare API
   const fetchAttractions = async () => {
@@ -16,6 +17,7 @@ const App = () => {
 
     setLoading(true);
     setError("");
+    setSearched(true); // Set searched to true after clicking "Explore"
 
     const apiKey = "fsq34UlC0S9hNJyll0ATALzaeperB6ZyzC2vB+cdT1edqQk="; // Replace with your Foursquare API key
     const endpoint = `https://api.foursquare.com/v3/places/search?query=tourist+attraction&near=${city}&limit=5`;
@@ -47,68 +49,51 @@ const App = () => {
     fetchAttractions();
   };
 
-  // Function to calculate bubble positions near the outer edge of the screen
-  const getBubblePosition = (index, total) => {
-    const angle = (index / total) * 2 * Math.PI; // Distribute bubbles evenly around the circle
-    const radius = Math.min(window.innerWidth, window.innerHeight) * 0.4; // Distance from center
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-
-    const x = centerX + radius * Math.cos(angle); // X position
-    const y = centerY + radius * Math.sin(angle); // Y position
-
-    return { x, y };
-  };
-
   return (
     <div className="app">
-      <h1>Dream Dashboard</h1>
-      <p className="tagline">Plan your dream destinations with ease!</p>
-      <form onSubmit={handleSubmit} className="search-form">
-        <input
-          type="text"
-          placeholder="Enter a city..."
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          className="search-input"
-        />
-        <button type="submit" className="search-button" disabled={loading}>
-          {loading ? "Searching..." : "Explore"}
-        </button>
-      </form>
+      {/* Search bar - Only show if not searched */}
+      {!searched && (
+        <div className="search-container">
+          <h1>Dream Dashboard</h1>
+          <p className="tagline">Plan your dream destinations with ease!</p>
+          <form onSubmit={handleSubmit} className="search-form">
+            <input
+              type="text"
+              placeholder="Enter a city..."
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              className="search-input"
+            />
+            <button type="submit" className="search-button" disabled={loading}>
+              {loading ? "Searching..." : "Explore"}
+            </button>
+          </form>
 
-      {error && <p className="error">{error}</p>}
+          {error && <p className="error">{error}</p>}
+        </div>
+      )}
 
-      {/* Attraction bubbles */}
-      <div className="bubbles-container">
-        {attractions.map((attraction, index) => {
-          const { x, y } = getBubblePosition(index, attractions.length);
-          return (
-            <div
-              key={index}
-              className="bubble"
-              style={{
-                top: `${y}px`,
-                left: `${x}px`,
-                animationDelay: `${index * 0.5}s`, // Staggered animation
-              }}
-            >
-              <h4>{attraction.name}</h4>
-              <p>{attraction.location.address || "No address available"}</p>
-              <a
-                href={`https://foursquare.com/v/${attraction.fsq_id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on Foursquare
-              </a>
-            </div>
-          );
-        })}
-      </div>
-
-      {attractions.length === 0 && !loading && (
-        <p className="no-results">No attractions found. Try another city.</p>
+      {/* Attractions grid - Only show if searched */}
+      {searched && (
+        <div className="attractions-grid">
+          {attractions.length > 0 ? (
+            attractions.map((attraction, index) => (
+              <div key={index} className="attraction">
+                <h3>{attraction.name}</h3>
+                <p>{attraction.location.address || "No address available"}</p>
+                <a
+                  href={`https://foursquare.com/v/${attraction.fsq_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Foursquare
+                </a>
+              </div>
+            ))
+          ) : (
+            <p className="no-results">No attractions found. Try another city.</p>
+          )}
+        </div>
       )}
     </div>
   );
