@@ -1,6 +1,7 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Lora', serif;
+  color: #524747; /* Dark grey text color */
+  background-color: #98b99f; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,10 +13,10 @@ body {
 
 .app {
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 244, 235, 0.9);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
   max-width: 800px;
   width: 90%;
   position: relative;
@@ -44,23 +45,23 @@ h1 {
 .search-input {
   width: 70%;
   padding: 0.75rem;
-  border: 2px solid #ff6f61;
-  border-radius: 25px;
+  border: 2px solid #4f747c;
+  border-radius: 20px;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 .search-input:focus {
-  border-color: #ff3b2f;
+  border-color: #284a52;
 }
 
 .search-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #ff6f61;
+  padding: 1.00rem 1.5rem;
+  background-color: #4f747c;
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
   margin-left: 0.5rem;
@@ -68,7 +69,7 @@ h1 {
 }
 
 .search-button:hover {
-  background-color: #ff3b2f;
+  background-color: #284a52;
 }
 
 .search-button:disabled {
@@ -97,7 +98,7 @@ h1 {
 
 .bubble {
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 244, 235, 0.9);
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: float 6s infinite ease-in-out;
@@ -115,18 +116,18 @@ h1 {
 
 .bubble h4 {
   margin: 0 0 0.5rem 0;
-  color: #ff6f61;
+  color: #421f1c;
   font-size: 0.9rem;
 }
 
 .bubble p {
   margin: 0.25rem 0;
-  color: #555;
+  color: #c46a6a;
   font-size: 0.8rem;
 }
 
 .bubble a {
-  color: #007bff;
+  color: #378a9c;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
