@@ -1,4 +1,4 @@
-#root, #app, .main-container{
+#root, #app, .main-container {
     height: 100vh; 
     width: 100vw;
     display: flex;
@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Lora', serif;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
     color: #524747; /* Dark grey text color */
     margin: 0;
     padding: 0px;
@@ -21,34 +21,39 @@ h2 {
     color: #333;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     gap: 50px;
     width: 100%;
     background-color: #98b99d;
     padding: 15px 20px 10px 20px;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
-.header img{
+
+.header img {
     padding-left: 690px;
 }
 
-.main-content{
+.main-content {
     display: flex;
     flex-direction: row; 
     align-content: center;
     justify-content: center;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
 
-.text{
+.text {
     align-content: center;
     justify-content: center;
     padding-left: 15%;
     display: flex;
     flex-direction: column;
     max-width: 25%;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
 
 .search-button {
@@ -61,6 +66,7 @@ h2 {
     cursor: pointer;
     margin-left: 0.5rem;
     transition: background-color 0.3s ease;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
 
 .slider {

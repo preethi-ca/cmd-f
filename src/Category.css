@@ -1,64 +1,57 @@
-    
-    .category-container {
-        text-align: center;
-        background: rgba(255, 244, 235, 0.9);
-        /* Light beige background */
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
-        /* Blue shadow */
-        width: 90%;
-        max-width: 800px;
-        margin: 2rem auto;
-        transition: all 0.5s ease;
-        
-    }
+body {
+    background-color: #98b99f;
+}
 
-    .container h1 {
-        color: #4f747c;
-        /* Dark teal for the title */
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-    }
+.category-container {
+    text-align: center;
+    background: rgba(255, 244, 235, 0.9); /* Light beige background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2); /* Blue shadow */
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    transition: all 0.5s ease;
+}
 
-    body {
-        background-color: #98b99f;
-    }
+.category-container h1 {
+    color: #4f747c; /* Dark teal for the title */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
+}
 
-    .container button {
-        background-color: #4f747c !important; /* Dark teal */
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 1rem 2rem;
-        font-size: 1.2em;
-        cursor: pointer;
-        margin: 100px;
-        transition: background-color 0.3s ease;
-        width: 60%;
-        /* Button width */
-        max-width: 300px;
-    }
+.category-container button {
+    background-color: #4f747c !important; /* Dark teal */
+    color: white; /* Change text color to white */
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 1rem auto; /* Center the button and add margin */
+    transition: background-color 0.3s ease;
+    width: 60%; /* Button width */
+    max-width: 300px;
+    display: block; /* Ensure the button is displayed as a block element */
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
+}
 
-    .container button:hover {
-        background-color: #284a52 !important;
-        /* Darker teal on hover */
-    }
+.category-container button:hover {
+    background-color: #284a52 !important; /* Darker teal on hover */
+}
 
-    .container button:focus {
-        outline: none;
-        box-shadow: 0 0 5px rgba(44, 61, 156, 0.5);
-        /* Focus shadow */
-    }
+.category-container button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(44, 61, 156, 0.5); /* Focus shadow */
+}
 
-    .container button:active {
-        background-color: #284a52;
-        /* Darker teal on click */
-    }
+.category-container button:active {
+    background-color: #284a52; /* Darker teal on click */
+}
 
-    .container p {
-        color: #555;
-        /* Dark grey for descriptive text */
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
+.category-container p {
+    color: #555; /* Dark grey for descriptive text */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}

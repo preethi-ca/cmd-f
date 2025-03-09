@@ -18,7 +18,7 @@ html, body {
 }
 
 h2 {
-    color: #333;
+    color: #524747;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -90,6 +90,9 @@ h2 {
     text-align: center;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform .4s;
+    font-family: 'Courier', monospace; /* Ensure consistent font family */
+    color: #333; /* Text color */
+    background-color: #fdf5c4; /* Default background color */
 }
 
 .post-it:hover{
@@ -97,13 +100,13 @@ h2 {
 }
 
 .one{
-    background-color: #FFF9C4;
+    background-color: #fdf5c4;
     top: 46%;
     left: 10%;
 }
 
 .two{
-    background-color: #B3E5FC;
+    background-color: #ffe5d9;
     top: 10%;
     left: 40%;
 }
@@ -113,14 +116,14 @@ h2 {
 }
 
 .three{
-    background-color:#C8E6C9;
+    background-color:#d8e2dc;
     top: 48%;
     left: 65%;
     width: 12%;
 }
 
 .four{
-    background-color:#FF8A80;
+    background-color:#fbdade;
     top: 48%;
     left: 80%;
     width: 13%;

@@ -9,10 +9,7 @@ const Dream = () => {
   return (
     <div>
       <div className="header">
-        <h2>Dream Travels</h2>  
-        <h2>Blog</h2> 
-        <h2>Search</h2> 
-        <h2>My Dream Dashboard</h2>
+
       </div>
       <div className="post-its">
         <div className="images">
