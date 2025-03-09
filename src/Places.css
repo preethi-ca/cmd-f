@@ -9,6 +9,7 @@ body {
 }
 
 .places-container {
+    color: #4f747c; /* Dark teal for the title */
     max-width: 1200px;
     text-align: center;
     background: rgba(255, 244, 235, 0.9); /* Light beige background */
@@ -49,16 +50,22 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    transform: translateY(20%);
+    textcposition: relative;
+    transform: translateY(30%);
+enter: cposition: relative;
+    transform: translateY(30%);
+enter;
+    position: relative;
+    transform: translateY(30%);
     width: 100%;
-    margin: 0; /* Remove any margin around the boxes */
-    margin-bottom: 50px;
+    margin: 0; /* Remove any margin around thmargin-bottom: 10px;
+e boxes */
+    margin-bottom: 10px;
     font-family: 'Courier', monospace; /* Ensure consistent font family */
 }
 
 .place:hover {
-    transform: translateY(50px);
+    transf50m: translateY(50px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -88,8 +95,8 @@ h1 {
     color: #007bff;
 }
 
-.error {
-    color: red;
+.errr {
+    color:red;
   }
 
   .add{
