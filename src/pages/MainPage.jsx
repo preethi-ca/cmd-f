@@ -7,7 +7,7 @@ import morocco from "../assets/morocco.jpg";
 import paris from "../assets/paris.jpg";
 import phuket from "../assets/phuket.jpeg";
 import swiss from "../assets/swiss.jpg";
-import user from "../assets/walrus.png";
+import user from "../assets/dog.png";
 
 const MainPage = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook

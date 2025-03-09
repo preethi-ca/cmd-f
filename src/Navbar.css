@@ -59,6 +59,12 @@
     color: #284a52; /* Darker teal on hover */
 }
 
+.user-icon{
+    height: 40px;
+    width: 40px;
+    margin-right: 50px;
+}
+
 /* Ensure content is not hidden under the navbar */
 body {
     padding-top: 80px;
