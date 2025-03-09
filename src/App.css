@@ -1,7 +1,7 @@
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Courier', monospace;
   color: #524747; /* Dark grey text color */
-  background-color: #98b99f; /* Green background */
+  background-color: #F8F8F6; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -19,6 +19,12 @@ body {
   align-items: center;
 }
 
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
 .search-container {
   text-align: center;
   background: rgba(255, 244, 235, 0.9); /* Light beige background */
@@ -28,11 +34,30 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 2rem auto;
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+}
+
+.search-container.thin-search {
+  font-family: 'Courier', monospace;
+  padding: 0.5rem; /* Reduce padding */
+  max-width: 400px; /* Make it narrower */
+  margin-top: 1rem; /* Move it closer to the top */
+}
+
+.search-container.thin-search h1,
+.search-container.thin-search .tagline {
+  display: none; /* Hide the title and tagline */
+}
+
+.search-container.thin-search .search-form {
+  flex-direction: row; /* Keep the search input and button in a row */
 }
 
 h1 {
-  color: #333;
-  font-size: 2.5rem;
+  color: #414141;
+  font-family: 'Courier', monospace;
+  font-size: 3rem;
+  font-style: italic;
   margin-bottom: 0.5rem;
 }
 
@@ -51,6 +76,7 @@ h1 {
 }
 
 .search-input {
+  font-family: 'Courier', monospace;
   width: 70%;
   padding: 0.75rem;
   border: 2px solid #4f747c; /* Dark teal border */
@@ -65,8 +91,9 @@ h1 {
 }
 
 .search-button {
-  padding: 1rem 1.5rem;
-  background-color: #4f747c; /* Dark teal */
+  font-family: 'Courier', monospace;
+  padding: 1.00rem 1.5rem;
+  background-color: #4f747c;
   color: white;
   border: none;
   border-radius: 20px;
@@ -136,4 +163,11 @@ h1 {
   color: #524747; /* Dark grey for no results message */
   text-align: center;
   margin-top: 2rem;
+}
+
+.loading {
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
