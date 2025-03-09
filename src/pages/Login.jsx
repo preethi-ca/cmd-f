@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css"; // Ensure this file contains the necessary CSS
+import "./Login.css"; // Ensure this file contains the necessary CSS
 
 function Login(){
     const [email, setEmail] = useState("");
