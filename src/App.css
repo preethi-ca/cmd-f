@@ -1,7 +1,7 @@
 body {
   font-family: 'Lora', serif;
   color: #524747; /* Dark grey text color */
-  background-color: #98b99f; 
+  background-color: #98b99f; /* Green background */
   margin: 0;
   padding: 0;
   display: flex;
@@ -21,10 +21,10 @@ body {
 
 .search-container {
   text-align: center;
-  background: rgba(255, 244, 235, 0.9);
+  background: rgba(255, 244, 235, 0.9); /* Light beige background */
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
+  box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2); /* Blue shadow */
   max-width: 800px;
   width: 90%;
   margin: 2rem auto;
@@ -47,13 +47,13 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: #333; /* Dark grey for the title */
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .tagline {
-  color: #555;
+  color: #555; /* Dark grey for the tagline */
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -69,7 +69,7 @@ h1 {
 .search-input {
   width: 70%;
   padding: 0.75rem;
-  border: 2px solid #4f747c;
+  border: 2px solid #4f747c; /* Dark teal border */
   border-radius: 20px;
   font-size: 1rem;
   outline: none;
@@ -77,12 +77,12 @@ h1 {
 }
 
 .search-input:focus {
-  border-color: #284a52;
+  border-color: #284a52; /* Darker teal for focus */
 }
 
 .search-button {
-  padding: 1.00rem 1.5rem;
-  background-color: #4f747c;
+  padding: 1rem 1.5rem;
+  background-color: #4f747c; /* Dark teal */
   color: white;
   border: none;
   border-radius: 20px;
@@ -93,16 +93,16 @@ h1 {
 }
 
 .search-button:hover {
-  background-color: #284a52;
+  background-color: #284a52; /* Darker teal on hover */
 }
 
 .search-button:disabled {
-  background-color: #ccc;
+  background-color: #ccc; /* Grey when disabled */
   cursor: not-allowed;
 }
 
 .error {
-  color: #ff3b2f;
+  color: #ff3b2f; /* Red for errors */
   margin-top: 1rem;
 }
 
@@ -120,7 +120,7 @@ h1 {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #ff6f61;
+  background-color: #4f747c; /* Dark teal */
   color: white;
   border: none;
   border-radius: 25px;
@@ -131,41 +131,31 @@ h1 {
 }
 
 .back-button:hover {
-  background-color: #ff3b2f;
+  background-color: #284a52; /* Darker teal on hover */
 }
 
-.bubble {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+.attraction {
+  background: rgba(255, 244, 235, 0.9); /* Light beige background */
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(44, 61, 156, 0.2); /* Blue shadow */
   text-align: center;
-  width: 140px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Rounded, organic shape */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for shadow effect */
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Shadowed edges */
 }
 
-.bubble h4 {
-  margin: 0 0 0.5rem 0;
-  color: #ff6f61;
+.attraction h3 {
+  color: #4f747c; /* Dark teal for attraction names */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.attraction p {
+  color: #524747; /* Dark grey for addresses */
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-.bubble p {
-  margin: 0.25rem 0;
-  color: #555;
-  font-size: 0.8rem;
-}
-
-.bubble a {
-  color: #007bff;
+.attraction a {
+  color: #284a52; /* Darker teal for links */
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
@@ -176,13 +166,13 @@ h1 {
 }
 
 .no-results {
-  color: #555;
+  color: #524747; /* Dark grey for no results message */
   text-align: center;
   margin-top: 2rem;
 }
 
 .loading {
-  color: #555;
+  color: #524747; /* Dark grey for loading message */
   text-align: center;
   margin-top: 2rem;
   font-size: 1.2rem;
