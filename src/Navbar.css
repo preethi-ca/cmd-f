@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Keeps logo on the left, links on the right */
+    align-items: center;
+    background-color: #4f747c; /* Dark teal */
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(44, 61, 156, 0.2); /* Blue shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; /* Ensures navbar doesn't stretch too wide */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar-logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    //flex-wrap: wrap; /* Ensures links wrap instead of overflowing */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.navbar-links li {
+    flex-shrink: 0; /* Prevents items from shrinking too much */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
+}
+
+.navbar-links li a:hover {
+    color: #284a52; /* Darker teal on hover */
+}
+
+/* Ensure content is not hidden under the navbar */
+body {
+    padding-top: 80px;
+}
+
+/* 🔹 Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack items on small screens */
+        text-align: center;
+    }
+
+    .navbar-links {
+        justify-content: center; /* Center links */
+        width: 100%;
+    }
+}

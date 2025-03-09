@@ -1,0 +1,98 @@
+body {
+    font-family: 'Lora', serif;
+    color: #524747; /* Dark grey text color */
+    background-color: #98b99f; /* Green background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 244, 235, 0.9); /* Light beige background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2); /* Blue shadow */
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+  }
+  
+  h1 {
+    color: #333; /* Dark grey for the title */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 span {
+    color: #4f747c; /* Dark teal for the city and category */
+  }
+  
+  .place {
+    background: rgba(255, 244, 235, 0.9); /* Light beige background */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(44, 61, 156, 0.2); /* Blue shadow */
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .place h3 {
+    color: #4f747c; /* Dark teal for place names */
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .place p {
+    color: #524747; /* Dark grey for the description and address */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .error {
+    color: #ff3b2f; /* Red for errors */
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  #placesList {
+    margin-top: 2rem;
+  }
+  
+  #placesList p {
+    color: #524747; /* Dark grey for the no results message */
+    text-align: center;
+  }
+  
+  .loading {
+    color: #524747; /* Dark grey for loading message */
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  button {
+    padding: 1rem 1.5rem;
+    background-color: #4f747c; /* Dark teal */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  button:hover {
+    background-color: #284a52; /* Darker teal on hover */
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Grey when disabled */
+    cursor: not-allowed;
+  }
+  

@@ -34,7 +34,7 @@ body {
 .search-container.thin-search {
   padding: 0.5rem; /* Reduce padding */
   max-width: 400px; /* Make it narrower */
-  margin-top: 1rem; /* Move it closer to the top */
+  margin-top: auto; /* Move it closer to the top */
 }
 
 .search-container.thin-search h1,
@@ -89,6 +89,7 @@ h1 {
   font-size: 1rem;
   cursor: pointer;
   margin-left: 0.5rem;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
