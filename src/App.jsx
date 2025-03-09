@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css"; // Updated CSS for the new layout
+import "./App.css"; // Updated CSS for animations
 
 const App = () => {
   const [city, setCity] = useState("");
@@ -49,34 +49,53 @@ const App = () => {
     fetchAttractions();
   };
 
+  // Function to reset the app to the initial state
+  const handleBack = () => {
+    setSearched(false);
+    setCity("");
+    setAttractions([]);
+    setError("");
+  };
+
   return (
     <div className="app">
-      {/* Search bar - Only show if not searched */}
-      {!searched && (
-        <div className="search-container">
-          <h1>Dream Dashboard</h1>
-          <p className="tagline">Plan your dream destinations with ease!</p>
-          <form onSubmit={handleSubmit} className="search-form">
-            <input
-              type="text"
-              placeholder="Enter a city..."
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              className="search-input"
-            />
-            <button type="submit" className="search-button" disabled={loading}>
-              {loading ? "Searching..." : "Explore"}
-            </button>
-          </form>
+      {/* Search bar - Transform into thin search bar when searched */}
+      <div className={`search-container ${searched ? "thin-search" : ""}`}>
+        {!searched ? (
+          <>
+            <h1>Dream Dashboard</h1>
+            <p className="tagline">Plan your dream destinations with ease!</p>
+          </>
+        ) : null}
+        <form onSubmit={handleSubmit} className="search-form">
+          <input
+            type="text"
+            placeholder="Enter a city..."
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            className="search-input"
+          />
+          <button type="submit" className="search-button" disabled={loading}>
+            {loading ? "Searching..." : "Explore"}
+          </button>
+        </form>
 
-          {error && <p className="error">{error}</p>}
-        </div>
-      )}
+        {error && <p className="error">{error}</p>}
+      </div>
 
       {/* Attractions grid - Only show if searched */}
       {searched && (
         <div className="attractions-grid">
-          {attractions.length > 0 ? (
+          {/* Back button */}
+          <button className="back-button" onClick={handleBack}>
+            &larr; Back to Search
+          </button>
+
+          {/* Loading spinner or message */}
+          {loading && <p className="loading">Loading attractions...</p>}
+
+          {/* Attractions */}
+          {!loading && attractions.length > 0 ? (
             attractions.map((attraction, index) => (
               <div key={index} className="attraction">
                 <h3>{attraction.name}</h3>
@@ -91,7 +110,7 @@ const App = () => {
               </div>
             ))
           ) : (
-            <p className="no-results">No attractions found. Try another city.</p>
+            !loading && <p className="no-results">No attractions found. Try another city.</p>
           )}
         </div>
       )}

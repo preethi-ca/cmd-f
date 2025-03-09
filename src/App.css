@@ -28,6 +28,22 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 2rem auto;
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+}
+
+.search-container.thin-search {
+  padding: 0.5rem; /* Reduce padding */
+  max-width: 400px; /* Make it narrower */
+  margin-top: 1rem; /* Move it closer to the top */
+}
+
+.search-container.thin-search h1,
+.search-container.thin-search .tagline {
+  display: none; /* Hide the title and tagline */
+}
+
+.search-container.thin-search .search-form {
+  flex-direction: row; /* Keep the search input and button in a row */
 }
 
 h1 {
@@ -47,6 +63,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Stack input and button vertically initially */
 }
 
 .search-input {
@@ -91,12 +108,30 @@ h1 {
 
 .attractions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Equally spaced grid */
-  gap: 1rem; /* Space between attractions */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   width: 90%;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ff3b2f;
 }
 
 .bubble {
@@ -144,4 +179,11 @@ h1 {
   color: #555;
   text-align: center;
   margin-top: 2rem;
+}
+
+.loading {
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
