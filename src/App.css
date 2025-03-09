@@ -28,26 +28,10 @@ body {
   max-width: 800px;
   width: 90%;
   margin: 2rem auto;
-  transition: all 0.5s ease; /* Smooth transition for all properties */
-}
-
-.search-container.thin-search {
-  padding: 0.5rem; /* Reduce padding */
-  max-width: 400px; /* Make it narrower */
-  margin-top: auto; /* Move it closer to the top */
-}
-
-.search-container.thin-search h1,
-.search-container.thin-search .tagline {
-  display: none; /* Hide the title and tagline */
-}
-
-.search-container.thin-search .search-form {
-  flex-direction: row; /* Keep the search input and button in a row */
 }
 
 h1 {
-  color: #333; /* Dark grey for the title */
+  color: #333;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -117,24 +101,6 @@ h1 {
   padding: 1rem;
 }
 
-.back-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #4f747c; /* Dark teal */
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: #284a52; /* Darker teal on hover */
-}
-
 .attraction {
   background: rgba(255, 244, 235, 0.9); /* Light beige background */
   padding: 1rem;
@@ -170,11 +136,4 @@ h1 {
   color: #524747; /* Dark grey for no results message */
   text-align: center;
   margin-top: 2rem;
-}
-
-.loading {
-  color: #524747; /* Dark grey for loading message */
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 1.2rem;
 }

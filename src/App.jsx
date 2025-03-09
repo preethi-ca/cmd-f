@@ -25,6 +25,14 @@ const App = () => {
     }
   };
 
+  // Function to reset the app to the initial state
+  const handleBack = () => {
+    setSearched(false);
+    setCity("");
+    setAttractions([]);
+    setError("");
+  };
+
   return (
     <>
       <Navbar />
