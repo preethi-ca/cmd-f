@@ -49,11 +49,15 @@
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s ease;
-    background-color: #c8cacb;
+    border: 2px solid #719C7A;
+    background-color: #f0f0f0; /* Change the background color */
+    color: #524747; /* Dark grey text color */
+    font-family: 'Courier', monospace;
+    outline: none;
   }
   
   .home-box input[type="text"]:focus {
-    border-color: inherit; /* Keep the original border color on focus */
+    border-color: #50685d; /* Change the border color on focus */
   }
   
   /* Button styling */
