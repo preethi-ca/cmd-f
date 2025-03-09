@@ -81,4 +81,10 @@
   .error {
     color: red;
   }
+
+  .add{
+    height: 30px;
+    width: 30px;
+    padding-left: 90%;
+  }
   

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // For navigation between pages
 import "./Navbar.css"; // Optional: Add styles for the navbar
-import dog from "./assets/dog.png";
+import dog from "./assets/walrus.png";
 
 const Navbar = () => {
   return (

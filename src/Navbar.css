@@ -33,7 +33,7 @@
 .navbar-links {
     list-style: none;
     display: flex;
-    //flex-wrap: wrap; /* Ensures links wrap instead of overflowing */
+    flex-wrap: wrap; /* Ensures links wrap instead of overflowing */
     gap: 1rem;
     margin: 0;
     padding: 0;
