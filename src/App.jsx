@@ -20,7 +20,7 @@ const App = () => {
     setSearched(true); // Set searched to true after clicking "Explore"
 
     const apiKey = "fsq34UlC0S9hNJyll0ATALzaeperB6ZyzC2vB+cdT1edqQk="; // Replace with your Foursquare API key
-    const endpoint = `https://api.foursquare.com/v3/places/search?query=tourist+attraction&near=${city}&limit=5`;
+    const endpoint = `https://api.foursquare.com/v3/places/search?query=restaurant&near=${city}&limit=5`;
 
     try {
       const response = await fetch(endpoint, {
