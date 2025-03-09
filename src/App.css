@@ -35,10 +35,10 @@ body {
 
 .search-container {
   text-align: center;
-  background: rgba(255, 244, 235, 0.9);
+  background: rgba(255, 244, 235, 0.9); /* Light beige background */
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
+  box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2); /* Blue shadow */
   max-width: 800px;
   width: 90%;
   margin: 2rem auto;
@@ -70,7 +70,7 @@ h1 {
 }
 
 .tagline {
-  color: #555;
+  color: #555; /* Dark grey for the tagline */
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -87,7 +87,7 @@ h1 {
   font-family: 'Courier', monospace;
   width: 70%;
   padding: 0.75rem;
-  border: 2px solid #4f747c;
+  border: 2px solid #4f747c; /* Dark teal border */
   border-radius: 20px;
   font-size: 1rem;
   outline: none;
@@ -95,7 +95,7 @@ h1 {
 }
 
 .search-input:focus {
-  border-color: #284a52;
+  border-color: #284a52; /* Darker teal for focus */
 }
 
 .search-button {
@@ -108,20 +108,21 @@ h1 {
   font-size: 1rem;
   cursor: pointer;
   margin-left: 0.5rem;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
-  background-color: #284a52;
+  background-color: #284a52; /* Darker teal on hover */
 }
 
 .search-button:disabled {
-  background-color: #ccc;
+  background-color: #ccc; /* Grey when disabled */
   cursor: not-allowed;
 }
 
 .error {
-  color: #ff3b2f;
+  color: #ff3b2f; /* Red for errors */
   margin-top: 1rem;
 }
 
@@ -135,56 +136,28 @@ h1 {
   padding: 1rem;
 }
 
-.back-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #ff6f61;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: #ff3b2f;
-}
-
-.bubble {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+.attraction {
+  background: rgba(255, 244, 235, 0.9); /* Light beige background */
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(44, 61, 156, 0.2); /* Blue shadow */
   text-align: center;
-  width: 140px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Rounded, organic shape */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for shadow effect */
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Shadowed edges */
 }
 
-.bubble h4 {
-  margin: 0 0 0.5rem 0;
-  color: #ff6f61;
+.attraction h3 {
+  color: #4f747c; /* Dark teal for attraction names */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.attraction p {
+  color: #524747; /* Dark grey for addresses */
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-.bubble p {
-  margin: 0.25rem 0;
-  color: #555;
-  font-size: 0.8rem;
-}
-
-.bubble a {
-  color: #007bff;
+.attraction a {
+  color: #284a52; /* Darker teal for links */
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
@@ -195,7 +168,7 @@ h1 {
 }
 
 .no-results {
-  color: #555;
+  color: #524747; /* Dark grey for no results message */
   text-align: center;
   margin-top: 2rem;
 }
