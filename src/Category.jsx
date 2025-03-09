@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./Category.css"; // Ensure this file exists for styling
+import "./Category.css";
 
 const Category = () => {
   const navigate = useNavigate();

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom"; // Make sure to import useNavigate
+import { Routes, Route, useNavigate } from "react-router-dom";
+import MainPage from "./pages/MainPage"; // Import MainPage
+import Category from "./Category";
+import Places from "./Places"; 
 import Navbar from "./Navbar";
-import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Category from "./Category"; // Import Category component
 import "./App.css";
+import Home from "./pages/Home";
 
 const App = () => {
   const [city, setCity] = useState("");
@@ -13,7 +15,7 @@ const App = () => {
   const [error, setError] = useState("");
   const [searched, setSearched] = useState(false);
 
-  const navigate = useNavigate(); // Hook to navigate programmatically
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,14 +27,6 @@ const App = () => {
     }
   };
 
-  // Function to reset the app to the initial state
-  const handleBack = () => {
-    setSearched(false);
-    setCity("");
-    setAttractions([]);
-    setError("");
-  };
-
   return (
     <>
       <Navbar />
@@ -40,34 +34,17 @@ const App = () => {
         <Route
           path="/"
           element={
-            <div className="app">
-              <div className={`search-container ${searched ? "thin-search" : ""}`}>
-                {!searched ? (
-                  <>
-                    <h1>Dream Dashboard</h1>
-                    <p className="tagline">Type in a city, any city...</p>
-                  </>
-                ) : null}
-                <form onSubmit={handleSubmit} className="search-form">
-                  <input
-                    type="text"
-                    placeholder="Enter a city..."
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    className="search-input"
-                  />
-                  <button type="submit" className="search-button" disabled={loading}>
-                    {loading ? "Searching..." : "Explore"}
-                  </button>
-                </form>
-                {error && <p className="error">{error}</p>}
-              </div>
-            </div>
+            <MainPage
+              city={city}
+              setCity={setCity}
+              handleSubmit={handleSubmit} 
+            />
           }
         />
-        <Route path="/category" element={<Category />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/places" element={<Places />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
