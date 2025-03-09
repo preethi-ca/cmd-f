@@ -42,6 +42,7 @@ const App = () => {
           }
         />
         <Route path="/home" element={<Home />} />
+        <Route path="/mainpage" element={<MainPage />} />
         <Route path="/category" element={<Category />} />
         <Route path="/places" element={<Places />} />
         <Route path="/login" element={<Login />} />

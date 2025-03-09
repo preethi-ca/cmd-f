@@ -52,7 +52,7 @@ const Places = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="places-container">
         <h1>
           Top 5 Places in <span>{city}</span> - <span>{category}</span>
         </h1>

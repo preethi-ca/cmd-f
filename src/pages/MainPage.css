@@ -10,11 +10,11 @@ html, body {
     width: 100%;
     font-family: 'Lora', serif;
     color: #524747; /* Dark grey text color */
-    background-color: #98b99d;    
     margin: 0;
     padding: 0px;
     display: flex;
     overflow: hidden;
+    background-color: #98b99f !important;
 }
 
 h2 {

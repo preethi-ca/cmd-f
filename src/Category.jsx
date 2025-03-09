@@ -13,7 +13,7 @@ const Category = () => {
   };
 
   return (
-    <div className="container">
+    <div className="category-container">
       <h1>Select a Category</h1>
       <button onClick={() => showPlaces("Food & Drink")}>Food & Drink</button>
       <button onClick={() => showPlaces("Arts & Entertainment")}>Arts & Entertainment</button>

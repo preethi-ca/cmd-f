@@ -10,10 +10,13 @@ const Navbar = () => {
       </div>
       <ul className="navbar-links">
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/MainPage">Main</Link>
         </li>
         <li>
-          <Link to="/Login">Login</Link>
+          <Link to="/Home">Search</Link>
+        </li>
+        <li>
+          <Link to="/Login">Logout</Link>
         </li>
       </ul>
     </nav>

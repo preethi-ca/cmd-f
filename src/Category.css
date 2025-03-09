@@ -1,62 +1,58 @@
-/* Center the container in the viewport */
-body {
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-    background: rgba(255, 244, 235, 0.9); /* Light beige background */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2); /* Blue shadow */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Offsets the container by 50% of its width/height */
-    width: 80%;                       /* Optional width */
-    max-width: 800px;                 /* Optional max-width */
-    transition: all 0.5s ease; /* Smooth transition for all properties */
+    .category-container {
+        text-align: center;
+        background: rgba(255, 244, 235, 0.9);
+        /* Light beige background */
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
+        /* Blue shadow */
+        width: 90%;
+        max-width: 800px;
+        margin: 2rem auto;
+        transition: all 0.5s ease;
+\    }
 
-  }
-  
-  .container h1 {
-    color: #4f747c; /* Dark teal for the title */
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .container button {
-    background-color: #4f747c; /* Dark teal */
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin: 0.5rem;
-    transition: background-color 0.3s ease;
-    width: 60%; /* Button width */
-    max-width: 300px;
-  }
-  
-  .container button:hover {
-    background-color: #284a52; /* Darker teal on hover */
-  }
-  
-  .container button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(44, 61, 156, 0.5); /* Focus shadow */
-  }
-  
-  .container button:active {
-    background-color: #284a52; /* Darker teal on click */
-  }
-  
-  .container p {
-    color: #555; /* Dark grey for descriptive text */
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-  
+    .container h1 {
+        color: #4f747c;
+        /* Dark teal for the title */
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .container button {
+        background-color: #4f747c !important; /* Dark teal */
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 1rem 2rem;
+        font-size: 1.2em;
+        cursor: pointer;
+        margin: 100px;
+        transition: background-color 0.3s ease;
+        width: 60%;
+        /* Button width */
+        max-width: 300px;
+    }
+
+    .container button:hover {
+        background-color: #284a52 !important;
+        /* Darker teal on hover */
+    }
+
+    .container button:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(44, 61, 156, 0.5);
+        /* Focus shadow */
+    }
+
+    .container button:active {
+        background-color: #284a52;
+        /* Darker teal on click */
+    }
+
+    .container p {
+        color: #555;
+        /* Dark grey for descriptive text */
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }

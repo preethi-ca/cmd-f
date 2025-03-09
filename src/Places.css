@@ -1,14 +1,21 @@
-.container {
-    width: 100%;
+.places-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     text-align: center;
     position: absolute;
     top: 10%;
-    left: 0; //THIS IS THE PROBLEM
+    left: 258px; 
     transform: none;
     justify-content: center;
+    text-align: center;
+    background: rgba(255, 244, 235, 0.9);
+    /* Light beige background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(44, 61, 156, 0.2);
+    /* Blue shadow */
+    width: 90%;
+    margin: 2rem auto;
+    transition: all 0.5s ease;
   }
   
   h1 {
@@ -19,8 +26,8 @@
   #placesList {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Force 3 items per row */
-    gap: 10px 20px;  /* Set a vertical gap of 10px and horizontal gap of 20px */
-    margin-top: 20px;
+    gap: 10px 60px;  /* Set a vertical gap of 10px and horizontal gap of 20px */
+    margin-top: 20%;
     padding: 0;
     list-style: none;
     width: 100%;

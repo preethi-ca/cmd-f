@@ -48,6 +48,7 @@
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s ease;
+    background-color: #c8cacb;
   }
   
   .home-box input[type="text"]:focus {
