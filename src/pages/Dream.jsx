@@ -15,12 +15,14 @@ const Dream = () => {
         <h2>My Dream Dashboard</h2>
       </div>
       <div className="post-its">
-        <div className="title">
-            <h2>📍Rome, Italy</h2>
-            <img src={rome}/>
+        <div className="images">
+            <div className="title">
+                <h2>📍Rome, Italy</h2>
+                <img src={rome}/>
+            </div>
+            <img src={rome1} className="rome1"/>
+            <img src={rome2} className="rome2"/>
         </div>
-        <img src={rome1} className="rome1"/>
-        <img src={rome2} className="rome2"/>
         <div className="post-it one" draggable = "true">
             <h2 className="pin">📌</h2>
             <br/>

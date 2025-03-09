@@ -1,5 +1,5 @@
 #root, #app, .main-container{
-    height: 100vh; 
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ h2 {
     gap: 50px;
     width: 100%;
     background-color: #98b99d;
-    padding: 15px 20px 10px 20px;
+    padding: 15px 20px 2px 20px;
 }
 
 .post-its{
@@ -55,7 +55,7 @@ h2 {
     left: 10%;
 }
 
-img{
+.images img{
     width: 30%;
     object-fit: cover;
     border-radius: 10px;
