@@ -1,3 +1,4 @@
+    
     .category-container {
         text-align: center;
         background: rgba(255, 244, 235, 0.9);
@@ -10,13 +11,18 @@
         max-width: 800px;
         margin: 2rem auto;
         transition: all 0.5s ease;
-\    }
+        
+    }
 
     .container h1 {
         color: #4f747c;
         /* Dark teal for the title */
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
+    }
+
+    body {
+        background-color: #98b99f;
     }
 
     .container button {

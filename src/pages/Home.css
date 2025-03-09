@@ -9,6 +9,7 @@
     min-height: 100vh; /* Ensure it takes up full height of the viewport */
     padding: 20px;
     text-align: center;
+    background-color: #98b99f;
   }
   
   /* Box styling for the content */
