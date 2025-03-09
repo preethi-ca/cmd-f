@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "../App.css"; // Ensure this file contains the necessary CSS
 
 function Login(){
     const [email, setEmail] = useState("");
@@ -8,34 +8,44 @@ function Login(){
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
-        e.preventDefualt(); 
+        e.preventDefault(); 
         console.log("Logging in with:", email, password);
         navigate("/");
     };
 
+    const handleForgotPassword = () => {
+        navigate("/forgot-password"); // Adjust the path as needed
+    };
+
     return (
-        <div className="h-screen flex items-center justify-center">
-      <form onSubmit={handleLogin} className="p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          className="block w-full p-2 border rounded mb-2"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="block w-full p-2 border rounded mb-2"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <Link to="/home" className="w-full p-2 bg-blue-500 text-white rounded">Log in</Link>
-      </form>
-    </div>
+        <div className="login-container">
+            <div className="login-form-container">
+                <form onSubmit={handleLogin} className="p-6 bg-white shadow-lg rounded-lg">
+                    <h2 className="welcome-text">Welcome!</h2>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className="login-input mb-4"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        className="login-input mb-4"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit" className="login-button">Log in</button>
+                </form>
+                <button onClick={handleForgotPassword} className="forgot-password-button">Forgot Password?</button>
+            </div>
+            <div className="login-image-container">
+                <img src="src/assets/logo.png" alt="Login" className="login-image" />
+            </div>
+        </div>
     );
 }
 
