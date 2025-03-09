@@ -3,6 +3,10 @@ import "./Dream.css"; // Import App.css from the correct path
 import rome from "../assets/rome.jpg";
 import rome1 from "../assets/rome1.jpg";
 import rome2 from "../assets/rome2.jpg";
+import walrus from "../assets/walrus.png";
+import dog from "../assets/dog.png";
+import cat from "../assets/cat.png";
+import penguin from "../assets/penguin.png";
 
 const Dream = () => {
 
@@ -31,6 +35,8 @@ const Dream = () => {
                 <p>Via del Pellegrino, 11</p>
                 <p><b>Taverna dei migliori</b></p>
                 <p>Viale Manzoni, 107</p>
+                <img src={walrus} height="20px" width="20px"/>
+                <img src={cat} height="20px" width="20px"/>
             </div>
         </div>
         <div className="post-it two" draggable = "true">
@@ -59,6 +65,7 @@ const Dream = () => {
                 <p>⭐⭐⭐⭐ (593)</p>
                 <p><b>Hotel Villa San Lorenzo Maria</b></p>
                 <p>⭐⭐⭐⭐ (919)</p>
+                <img src={walrus} height="20px" width="20px"/>
             </div>
         </div>
         <div className="post-it four" draggable = "true">
@@ -72,6 +79,8 @@ const Dream = () => {
                 <p>☐ Shoes</p>
                 <p>☐ Money, Id, Passport</p>
                 <p>☐ Electronics</p>
+                <img src={penguin} height="20px" width="20px"/>
+                <img src={dog} height="20px" width="20px"/>
             </div>
         </div>
       </div>

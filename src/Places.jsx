@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Places.css"; // Ensure this file exists for styling
+import add from "./assets/add.png";
 
 const Places = () => {
   const location = useLocation();
@@ -69,6 +70,7 @@ const Places = () => {
                   ? place.categories.map((cat) => cat.name).join(", ")
                   : "Category info not available"}
               </p>
+              <img src={add} className="add"/>
             </div>
           ))
         ) : (
